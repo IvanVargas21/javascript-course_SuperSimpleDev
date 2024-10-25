@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link
+    rel="icon"
+    href="https://img.icons8.com/?size=48&id=PXTY4q2Sq2lG&format=png"
+    />
+</head>
+<body>
+     <!--CHALLENGE EXERCISE-->
+    <p>YouTube Subscribe Button</p>
+    <button id="subscribeBtn" onclick="clickSubcribe()">Subscribe</button>
+    <p>Rock Paper Scissors</p>
+    <a href="/09-DOM/09-rock-paper-scissors.html">Click here</a>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input class="js-cost-input" placeholder="Cost of order" oninput= 'handleCostTyping()'> 
+    <button id="calculateOrder" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+        String(25)
+        console.log('25' - 5);
+        console.log('25' + 5);
+        //window represents the browser, a built in object.
+        window.document
+        window.console.log('open window');
+        //window.alert()
+        /*
+        When we press a key:
+        1. Check if the key is Enter
+        2. If it is, do the same thing as the calculate button
+        
+       function handleCostKeyDown(event){
+        if(event.key === 'Enter'){
+            calculateTotal();
+        }   
+       }
+        */
+       function handleCostTyping(event){
+         const inputCost = document.querySelector('.js-cost-input').value;
+         document.querySelector('.js-total-cost').textContent = inputCost;
+       }
+        function calculateTotal(){
+            const inputCost = document.querySelector('.js-cost-input');
+            let cost = Number(inputCost.value);
+            if(cost < 40){
+                cost = Math.round(cost + 10);
+            }
+            document.querySelector('.js-total-cost').innerHTML =`$${cost}`;
+        }
+
+        function clickSubcribe(){
+            const subscribeBtn = document.getElementById('subscribeBtn');
+            if(subscribeBtn.innerText === "Subscribe"){
+                subscribeBtn.innerText = "Subscribed";
+             }else if(subscribeBtn.innerText === "Subscribed"){
+                subscribeBtn.innerText = "Subscribe";
+             }
+        }
+    </script>
+</body>
+</html>

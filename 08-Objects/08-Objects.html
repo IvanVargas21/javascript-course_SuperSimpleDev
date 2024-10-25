@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    const product = {
+        name: 'socks',
+        price: 1090,
+    };
+    console.log();
+    console.log(product.price);
+
+    product.name = "cotton socks";
+    console.log(product["name"])
+    
+    product.newProperty = true;
+    console.log(product);
+
+    //delete property of an object
+    delete product.newProperty;
+    console.log(product);
+  
+   const product2 = {
+    name: 'shirt',
+    ['delivery-time']: '1day',
+
+   };
+
+   console.log(product2);
+   console.log(product2['delivery-time']);
+
+   const jsonString = JSON.stringify(product2);
+   console.log(jsonString);
+   console.log(JSON.parse(jsonString));
+*/
+    const object1 = {
+      message: "hello",
+    };
+    const object2 = object1;
+
+    object1.message = "Good Job!";
+    console.log(object1);
+    console.log(object2);
+
+    //We can't compare object directly
+    const object3 = {
+      message: "Good Job!",
+    };
+    //this code compares the references, not the values inside.
+    console.log(object3 === object1);
+    //false
+    console.log(object2 === object1);
+    //true
+
+    const object4 = {
+      message: "Good Job!",
+      price: 799,
+    };
+    //getting property and assigning to a variable, to get the value.
+    //const message = object4.message;
+    //shortcut
+    //shortcut is called DESTRUCTURING
+    const { message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+      //message:message,
+      //shorthand property
+      message,
+      /*
+        method: function function1() {
+	        console.log('method');
+        }
+        */
+      //shorthand method
+      method() {
+        console.log("method");
+      },
+    };
+    console.log(object5.message);
+    //Good Job!
+    object5.method();
+  </script>
+</html>

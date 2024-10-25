@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11O</title>
+</head>
+<body>
+  <script>
+    /*
+      //11O
+      //Initialize w/ -1, as if word search was not in array,update if word 'search' was found
+      let index = -1;
+      let strings = ['hello', 'world', 'search','good'];
+      for(let i=0; i<strings.length; i++){
+        if(strings[i] === 'search'){
+          index = i;
+        }
+      }
+      console.log(index);
+
+      strings = ['word','not', 'found'];
+      console.log(strings);
+      index = -1;
+      for(let i=0; i<strings.length; i++){
+        if(strings[i] === 'search'){
+          index = i;
+        }
+      }
+      console.log(index);
+      
+      //11P
+      let index = -1;
+      let strings = ['search', 'world', 'hello','good', 'search']
+      for(let i = 0; i<strings.length; i++){
+        if(strings[i] === 'search');
+        index = i;
+        console.log(i);
+        break;
+      }
+      //Q
+      function findIndex(array, word){
+        let index = -1;
+        for(let i = 0; i<array.length; i++){
+          if(array[i] === word){
+            console.log(i);
+            index++;
+            break;
+          }
+        }
+        return index;
+      }
+      findIndex(['hello', 'world', 'search','good'], 'search');
+    */
+      //11R
+      function removeEgg(foods){
+        let eggRemoved = [];
+        for(let i=0; i<foods.length; i++){
+          if(foods[i] === 'egg'){
+            continue
+          }
+          eggRemoved.push(foods[i]);
+        }7
+        return eggRemoved;
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+  </script>
+</body>
+</html>

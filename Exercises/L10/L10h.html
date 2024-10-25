@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execise 10h</title>
+    <link
+    rel="icon"
+    href="https://img.icons8.com/?size=48&id=PXTY4q2Sq2lG&format=png"
+    />
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .subscribeBtn{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .isSubscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+        .cost-input{
+            font-size: 15px;
+            padding: 10px;
+        }
+        .calculate-button{
+            border: none;
+            background-color: #008000;
+            color: white;
+            padding: 12px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="JS-subscribeBtn subscribeBtn" onclick="clickSubcribe()">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input class="js-cost-input cost-input" placeholder="Cost of order" onkeydown="handleCostKeyDown(event)"> 
+    <button id="calculateOrder" class="calculate-button" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost error" style="color: red; font-weight: bold;"></p>
+    <p class="js-total-cost correct" style="color: black;"></p>
+    <p>Rock Paper Scissors</p>
+    <a href="./10-rock-paper-scissors.html">Click here</a>
+    <script>
+        String(25)
+        console.log('25' - 5);
+        console.log('25' + 5);
+        //window represents the browser, a built in object.
+        window.document
+        window.console.log('open window');
+        //window.alert()
+        /*
+        When we press a key:
+        1. Check if the key is Enter
+        2. If it is, do the same thing as the calculate button
+        */
+       function handleCostKeyDown(event){
+        if(event.key === 'Enter'){
+            calculateTotal();
+        }
+       }
+        function calculateTotal(){
+        const inputCost = document.querySelector('.js-cost-input');
+            let cost = Number(inputCost.value);
+            if(cost < 0){
+            document.querySelector('.error').innerHTML ="Error: cost cannot be less than $0";
+            }else{
+            if(cost < 40){
+            cost = cost + 10;
+            }
+            document.querySelector('.correct').innerHTML =`$${cost}`;
+            }
+        }
+
+        function clickSubcribe(){
+            const subscribeBtn = document.querySelector('.subscribeBtn');
+            ('subscribeBtn');
+            if(subscribeBtn.innerText === "Subscribe"){
+                subscribeBtn.innerText = "Subscribed";
+                subscribeBtn.classList.add('isSubscribed');
+             }else if(subscribeBtn.innerText === "Subscribed"){
+                subscribeBtn.innerText = "Subscribe";
+                subscribeBtn.classList.remove('isSubscribed')
+             }
+        }
+    </script>
+</body>
+</html>

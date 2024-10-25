@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="main-title">DOM Properties & Methods</title>
+  </head>
+  <body>
+    <h1 id="header">ICV Portfolio</h1>
+    <p class="info">This is the first information.</p>
+     <p class="info">More information here.</p>
+    <button>hello</button>
+
+    <script>
+      /*
+        //PROPERTIES OF 'document'object.
+
+        // Accessing document properties
+        console.log("Title:", document.title); // Document title
+        console.log("URL:", document.URL); // Document URL
+        console.log("Body Element:", document.body); // <body> element
+        console.log("Head Element:", document.head); // <head> element
+        console.log("Domain:", document.domain);
+        console.log("Referrer:", document.referrer); // URL of the document that linked to the current page.
+        console.log("Current Loading State: ", document.readyState); //(loading, interactive, complete)
+        console.log('Collection of Forms:', document.forms); //like an array like of collection.
+        console.log('Collection of Image: ',document.images); //returns an array like of collection
+        // Modifying the title using document object
+        document.title = "New Title";
+        
+        // Getting an element by ID
+        const mainTitle = document.getElementById("main-title");
+        console.log("Main Title Text:", mainTitle.textContent); // "Hello World"
+      */
+
+      //METHODS OF 'document'object.
+
+      /*
+        //Selects element by it's ID
+        const header = document.getElementById("header");
+        console.log("Header:",header) //<h1 id="header">ICV Portfolio</h1>
+        console.log("Header Text Content:", header.textContent); //ICV Porfolio
+
+        //Select all elements with the corresponding Classname
+        const infoParagraph = document.getElementsByClassName("info")
+        console.log("Collection Elements w/ same className:",infoParagraph); //returns collection of elements with the same classname.
+        console.log(infoParagraph.length)//returns # elements with the class 'info'
+
+        //Using querySelector to select the first matching element.
+        const firstInfo = document.querySelector('.info');
+        console.log("First Element on specified class:", firstInfo.textContent)
+
+        //Selects all specified elements
+        const paragraphs = document.getElementsByTagName('p');
+        console.log("Number of Elements with specfied tagname:", paragraphs.length);
+      */
+      
+      console.log(document.body.innerHTML);
+      //not limited to just changing the text, you can also insert and element inside.
+      document.body.innerHTML = `<p>innerHTML of the document object has been changed</p>
+      <button class="js-button">Button</button>`;
+      document.querySelector('.js-button').innerHTML = 'Changed';
+    </script>
+  </body>
+</html>

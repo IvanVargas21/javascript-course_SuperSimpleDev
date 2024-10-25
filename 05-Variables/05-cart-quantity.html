@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://img.icons8.com/?size=48&id=PXTY4q2Sq2lG&format=png">
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <div class="ctrl-btn">
+      <button id="show-quantity" onclick="console.log(`Cart Quantity: ${cartQuantity}`)">Show Quantity</button>
+      <button id="add-to-cart" onclick="console.log(`Cart Quantity: ${cartQuantity+=1}`)">Add to Cart</button>
+      <button id="addtwo-cart" onclick="console.log(`Cart Quantity: ${cartQuantity+=2}`)">+2</button>
+      <button id="addthree-cart" onclick="console.log(`Cart Quantity: ${cartQuantity+=3}`)">+3</button>
+      <button id="reset-cart" onclick="console.log('Cart was reset'); console.log(`Cart Quantity: ${cartQuantity = 0}`)">Reset Cart</button>
+    </div>
+  </body>
+ 
+  <script>
+    let cartQuantity = 0;
+    /* 
+    //My Code
+    //It's a bit advance, tried to implement what i have learned on DOM Manipulation in freeCodeCamp.
+
+    let quantitybtn = document.getElementById("show-quantity");
+    let addOnebtn = document.getElementById("add-to-cart");
+    let addTwobtn = document.getElementById("addtwo-cart");
+    let addThreebtn = document.getElementById("addthree-cart");
+    let resetbtn = document.getElementById("reset-cart");
+
+    quantitybtn.addEventListener("click", showQuantity);
+    addOnebtn.addEventListener("click", addToCart);
+    addTwobtn.addEventListener("click", addTwoCart);
+    addThreebtn.addEventListener("click", addThreeCart);
+    resetbtn.addEventListener("click", resetCart);
+    
+    let quantity = 0;
+
+    function showQuantity() {
+      console.log(`Cart Quantity: ${quantity}`);
+    };
+
+    function addToCart() {
+      quantity += 1;
+      console.log(`Cart Quantity: ${quantity}`);
+    };
+    function addTwoCart() {
+      quantity += 2;
+      console.log(`Cart Quantity: ${quantity}`);
+    };
+    function addThreeCart() {
+      quantity += 3;
+      console.log(`Cart Quantity: ${quantity}`);
+    };
+    function resetCart() {
+      quantity = 0;
+      console.log(`Cart Quantity: ${quantity}`);
+    };
+
+    */
+   
+  </script>
+</html>

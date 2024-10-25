@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [1, 2, 3, 4, 5];
+
+      //push( ) adds element - end of array
+      myArray.push(6);
+      console.log(myArray); //Output: (6) [1, 2, 3, 4, 5, 6]
+
+      //pop( ) removes element- end of array
+      myArray.pop();
+      console.log(myArray); //Output: (5) [1, 2, 3, 4, 5]
+
+      //unshift( ) adds element - beginning of array
+      myArray.unshift(0);
+      console.log(myArray); //Output (6) [0, 1, 2, 3, 4, 5]
+
+      //shift( ) removes element - beginning of array
+      myArray.shift(0);
+      console.log(myArray); //(5) [1, 2, 3, 4, 5]
+
+      //splice( ) add/removes items from array. (index. value);
+      //Example splice(0,2), it will remove 2, values from index 0.
+      myArray.splice();
+      console.log(myArray);
+
+      //concat( ) it'll merge two ore more arrays into a new array
+      myNewArray = myArray.concat([6, 7, 8, 9, 10]);
+      console.log(myNewArray);
+
+      /*
+       console.log(myArray)
+       console.log(myArray[2]);
+       myArray[0]=10;
+       console.log(myArray[0]);
+       console.log(myArray)
+
+       //[1, 'ivan vargas', false, {name:'ivan', age: 21}, [1,2,3,4,5]]
+       console.log(typeof [1,2,3,4,5]);
+
+       console.log(Array.isArray([1,2,3]));
+       myArray.push(6); //adds a value on the end of an array.
+       console.log(myArray)
+       myArray.splice(5,6); //removes a value from an array. (Index, Number of value to remove)
+       console.log(myArray)
+       */
+      console.log("Reference Types");
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+      array2.push(4);
+      console.log(array1);
+
+      //Destructuring
+      console.log("Destructuring");
+      const array = [1, 2, 3];
+      //what if i wanted to get the value of the 1 and second values
+      const [firstValue, secondValue] = [1, 2, 3];
+      //this will pass the 1st and 2nd value of an array to variables.
+      let numbers = [1, 2, 3, 4, 5, 6];
+      let [first, second, ...rest] = numbers;
+      console.log(first); //1
+      console.log(second); //2
+      console.log(rest); //[3,4,5,6]
+
+      for (let i = 1; i <= 10; i++) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+      /*
+      let i = 1;
+      while (i <= 10) {
+        if (i % 3 === 1) {
+          i++;
+          continue;
+        }
+        console.log(i);
+      }
+      */
+     console.log("dowhile")
+      let i = 1;
+      while (i <= 10) {
+        if (i % 3 === 1) {
+          i++; // Increment to avoid infinite loop
+          continue;
+        }
+        console.log(i);
+        i++; // Ensure i is incremented on every iteration
+      }
+    </script>
+  </body>
+</html>

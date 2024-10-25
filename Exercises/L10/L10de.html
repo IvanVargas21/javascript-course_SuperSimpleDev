@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Execise 10 D & E</title>
+    <style>
+      .gaming-btn,
+      .music-btn,
+      .tech-btn {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn1-is-toggled {
+        background-color: red;
+        color: white;
+      }
+      .btn2-is-toggled {
+        background-color: green;
+        color: white;
+      }
+      .btn3-is-toggled {
+        background-color: blue;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class="gaming-btn" onclick="btn1_isToggled()">Gaming</button>
+    <button class="music-btn" onclick="btn2_isToggled()">Music</button>
+    <button class="tech-btn" onclick="btn3_isToggled()">Tech</button>
+
+    <script>
+      function btn1_isToggled() {
+        const gamingButton = document.querySelector(".gaming-btn");
+        console.log(gamingButton.classList.contains("is-toggled)"));
+        if (gamingButton.classList.contains("btn1-is-toggled") == false) {
+          gamingButton.classList.add("btn1-is-toggled");
+        } else {
+          gamingButton.classList.remove("btn1-is-toggled");
+        }
+      }
+      function btn2_isToggled() {
+        const musicButton = document.querySelector(".music-btn");
+        if (musicButton.classList.contains("btn2-is-toggled") == false) {
+            musicButton.classList.add("btn2-is-toggled");
+        } else {
+            musicButton.classList.remove("btn2-is-toggled");
+        }
+      }
+      function btn3_isToggled() {
+        const techButton = document.querySelector(".tech-btn");
+        if (techButton.classList.contains("btn3-is-toggled") == false) {
+            techButton.classList.add("btn3-is-toggled");
+        } else {
+            techButton.classList.remove("btn3-is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>

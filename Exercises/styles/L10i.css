@@ -1,0 +1,24 @@
+body{
+    font-weight: bolder;
+    font-family: Arial;
+    background-color: black;
+}
+button{
+    font-size: 26px;
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 50%;
+}
+.arithmetic{
+    background-color: #FEA00A;
+    color: white;
+}
+.nums-operations {
+    background-color: #333;
+    color: white;
+}
+.js-calculation {
+    color: white;
+    font-size: 50px;
+}
