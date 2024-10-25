@@ -7,7 +7,7 @@
       rel="icon"
       href="https://img.icons8.com/?size=48&id=PXTY4q2Sq2lG&format=png"
     />
-    <link rel="stylesheet" href="../styles/10-rock-paper-scissors.css">
+    <link rel="stylesheet" href="../styles/12-rock-paper-scissors.css">
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -17,14 +17,15 @@
     *LIKE CREATING A JUST ONE FUNCTION, THAT COULD BE USED IN OVERALL
     -->
     <p class="title">Rock Paper Scissors</p>
+    <!-- playerMove will be automated, by using pickComputerMove, then it will be passed on the playGame() function as a parameter -->
     <button onclick="playGame('Rock')" class="move-button">
-      <img src="./imgs/rock-emoji.png" alt="rock" class="move-icon">
+      <img src="/10-DOM-CSS/imgs/Rock-emoji.png" alt="rock" class="move-icon">
     </button>
     <button onclick="playGame('Paper')" class="move-button">
-      <img src="./imgs/paper-emoji.png" alt="paper" class="move-icon">
+      <img src="/10-DOM-CSS/imgs/paper-emoji.png" alt="paper" class="move-icon">
     </button>
     <button onclick="playGame('Scissors')" class="move-button">
-      <img src="./imgs/scissors-emoji.png" alt="scissors-emoji" class="move-icon">
+      <img src="/10-DOM-CSS/imgs/scissors-emoji.png" alt="scissors-emoji" class="move-icon">
     </button>
     <div id="result">
         <p class="js-result result"></p>
@@ -38,7 +39,10 @@
     localStorage.removeItem('score');
     updateScoreElement();
     " class="reset-score-button">Reset Score</button>
-    <script src="../scripts/10-rock-paper-scissors.js"></script>
+    <button class="auto-play-button" onclick="autoPlay()">
+    Autoplay 
+    </button>
+    <script src="../scripts/12-rock-paper-scissors.js"></script>
   </body>
 </html>
 
