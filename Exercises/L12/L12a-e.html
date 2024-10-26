@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12 A-E</title>
+</head>
+<body>
+    <!-- <button class="js-finished-btn" onclick="updateButton()">Finish</button> -->
+    <button class="js-addtocart-btn" onclick="updateCart()">Add to cart
+    </button>
+    <p class="js-addedtocart"></p>
+    <script>
+        /*
+        //12A
+        const add = ()=>{
+            console.log(2+3);
+        }
+        add();
+        add();
+
+        //12B
+        function runTwice(fun){
+            fun();
+            fun();
+        };
+        runTwice(()=> console.log('12b'));
+        runTwice(add);
+        
+        //12C
+        function updateButton(){
+            const button = document.querySelector('.js-finished-btn');
+
+            setTimeout(function(){
+                button.innerHTML = 'Finished!';
+            }, 1000);
+        }
+        
+       //12D
+       function updateButton(){
+            const button = document.querySelector('.js-finished-btn');
+            setTimeout(function(){
+                button.innerHTML = 'Finished!';
+            }, 3000);
+            //feature of asynch
+            button.innerHTML = 'Loading...'
+        }
+        */
+        //12E
+        function updateCart(){
+            const button = document.querySelector('.js-addtocart-btn');
+
+            const cartText = document.querySelector('.js-addedtocart');
+
+            cartText.innerHTML = 'Added';
+
+            setTimeout(()=>{
+                cartText.innerHTML= ''
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
