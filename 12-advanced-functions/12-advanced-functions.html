@@ -59,13 +59,29 @@
         // }, 3000);
         // console.log('next line 2');
 
-        [
-          1,
-          2,
-          3
-        ].forEach((value, index)=>{
-          console.log(`Index: ${index}, Value: ${value}`);
-        })
+        // [
+        //   1,
+        //   2,
+        //   3
+        // ].forEach((value, index)=>{
+        //   console.log(`Index: ${index}, Value: ${value}`);
+        // })
+
+        // console.log([1,-3,5].filter((value, index)=>{
+        // /*
+        //   if(value>=0){
+        //     //include it on new array
+        //     return true;
+        //   }
+        //   return false;
+        // }));
+        // */
+        //  return value >=0;
+        // }));
+        
+        console.log([1,2,3].map((num,index) => {return num*2}));
+        //shortcut.
+        console.log([1,2,3].map(num => num*2));
     </script>
   </body>
 </html>

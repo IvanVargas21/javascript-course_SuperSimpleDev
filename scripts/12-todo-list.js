@@ -42,11 +42,8 @@ function renderToDoList(){
         <div>${name} </div>
         <div>${duedate}</div>
         <button 
-        class="delete-todo-button"
-        onclick="
-        toDoList2.splice(${index},1);
-        renderToDoList();
-        ">Delete</button>`;
+        class="delete-todo-button js-delete-todo-button"
+        >Delete</button>`;
      todoListHTML += html;
      });
     //  //loops through array toDoList2
@@ -69,8 +66,19 @@ function renderToDoList(){
     //  }
      //Accumulated elements will be inserted on innerHTML.
      const display = document.querySelector('.js-todo-list2').innerHTML = todoListHTML;
- }
+     //problem well have multiple delete button, means multiple classe, then the querySelector() will only select the first element. To solve this well use the querySelectorAll
+     document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index)=>{
+        deleteButton.addEventListener('click', ()=>{      
+        toDoList2.splice(index,1);
+        renderToDoList();
+        });
+    });
+     }
  
+document.querySelector('.js-add-todo-button').addEventListener('click', ()=>{
+    addToDo();
+})
+
 function addToDo(){
     const inputElement = document.getElementById('inputName');
     const dateInputElement = document.getElementById('inputDate');
