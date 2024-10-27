@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=48&id=PXTY4q2Sq2lG&format=png"
+    />
+    <link rel="stylesheet" href="/styles/12r.css">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <!-- TOO LONG IMPLEMENTATION -->
+    <!-- 
+    *COULD USE DIFFERENT APPROACH
+    *LIKE CREATING A JUST ONE FUNCTION, THAT COULD BE USED IN OVERALL
+    -->
+    <p class="title">Rock Paper Scissors</p>
+    <!-- playerMove will be automated, by using pickComputerMove, then it will be passed on the playGame() function as a parameter -->
+    <button onclick="playGame('Rock')" class="move-button js-rock-button">
+      <img src="/10-DOM-CSS/imgs/Rock-emoji.png" alt="rock" class="move-icon">
+    </button>
+    <button onclick="playGame('Paper')" class="move-button js-paper-button">
+      <img src="/10-DOM-CSS/imgs/paper-emoji.png" alt="paper" class="move-icon">
+    </button>
+    <button onclick="playGame('Scissors')" class="move-button js-scissors-button">
+      <img src="/10-DOM-CSS/imgs/scissors-emoji.png" alt="scissors-emoji" class="move-icon">
+    </button>
+    <div id="result">
+        <p class="js-result result"></p>
+        <p class="js-moves "></p>
+        <p class="js-score score"></p>
+    </div>
+    <button class="reset-score-button">Reset Score</button>
+    <button class="auto-play-button" onclick="autoPlay()">
+    Autoplay 
+    </button>
+    <div class="reset-confirmation">
+      
+    </div>
+    <script src="/scripts/12r.js"></script>
+  </body>
+</html>
+
+

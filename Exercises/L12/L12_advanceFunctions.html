@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Exercises</title>
+</head>
+<body>
+    <!-- Advance Functions -->
+    <!-- Challenges 12H- 12I -->
+
+    <!-- <button class="js-addtocart-btn" onclick="updateCart()">Add to cart
+    </button>
+    <p class="js-addedtocart"></p>
+    -->
+    <!-- 12H -->
+     <button class="js-add-btn" onclick="
+     messages++;
+     displayNotification()
+     ">Add</button>
+     <button class="js-remove-btn" onclick="
+     if(messages>0){
+     messages--;
+     //no messages, stop displaying notif on the tab
+     if(messages===0){
+        stopNotification();
+     }
+    }
+     ">Remove</button>
+
+    <script>
+        /*
+        //12F
+        //Accumulator
+        let timeoutId;
+        function updateCart(){
+        const button = document.querySelector('.js-addtocart-btn');
+
+        const cartText = document.querySelector('.js-addedtocart');
+        cartText.innerHTML = "Added";
+
+        //cancel the previous timeout so that it doesn't remove the message too quickly.
+        clearTimeout(timeoutId)
+
+        timeoutId = setTimeout(()=>{
+        cartText.innerHTML= ''
+        }, 5000); 
+    }
+        //12G
+        setInterval(()=>{
+            document.title  = '(2) New messages';
+        }, 1000);
+      
+       //12H
+       let messages=2;
+       document.querySelector('.js-add-btn').addEventListener('click',()=>{
+        messages+=1;
+       });
+       document.querySelector('.js-remove-btn').addEventListener('click',()=>{
+        messages-=1;
+       })
+       setInterval(()=>(document.title =`(${messages}) New messages`),1000);
+         */ 
+
+
+        //12I
+        let messages=2;
+        //save the interval id, to cancel setInterval
+        let intervalId;
+        //keep track whether display or not the notif
+        //since undefined, initial value is false.
+        let isDisplayNotification;
+
+        //display notif if the page first loads.
+        displayNotification();
+        function displayNotification(){
+            //need i check if the value of isDisplayNotification, is true na, means the notif ic already displaying.
+            //if notif is displayed, then we have to break the function
+            //prevents creating 2 intervals at the same time.
+            //if it is true.
+            if(isDisplayNotification){
+                //it will break
+                return;
+            }
+            isDisplayNotification = true;
+            //on the first loop it is set up, which will keep the function running every 1sec, until i use the clearInterval(intervalId)
+            //will create alternating title
+            intervalId = setInterval(()=>{
+                if(document.title === 'App'){
+                    document.title = `(${messages}) New messages`
+                }
+                //initial 
+                //since doc title = 'Challenge Exercise'
+                else{
+                    document.title = 'App'
+                }
+            }, 1000);
+        }
+        function stopNotification(){
+            //will allow to displayNotification again
+            isDisplayNotification = false;
+            //will stop the setnnterval execution every second.
+            clearInterval(intervalId);
+            document.title = 'App';
+        }
+    </script>
+</body>
+</html>
